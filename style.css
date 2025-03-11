@@ -724,11 +724,11 @@ section#about-us {
 
         & strong {
           font-size: 1.2rem;
-          flex: 0.3;
+          flex: 0.2;
         }
 
         & p {
-          flex: 0.7;
+          flex: 0.8;
           margin: 0;
         }
       }
