@@ -757,6 +757,39 @@ section#about-us {
   }
 }
 
+.WhatsApp {
+  display: flex;
+  margin-left: 10px;
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      height: 50px;
+    }
+
+    & img.icon {
+      display: block;
+    }
+
+    & img.hover {
+      display: none;
+    }
+
+    &:hover {
+      & img.icon {
+        display: none;
+      }
+
+      & img.hover {
+        display: block;
+      }
+    }
+  }
+}
+
 /*fede*/
 
 #our-people {

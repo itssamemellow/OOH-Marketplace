@@ -35,7 +35,7 @@
           />
         </svg>
       </div>
-      <span class="toggle">
+      <span class="toggle" id="toggle">
         <img src="/assets/img/icons/menu.webp" alt="Toggle" />
       </span>
       <nav class="norm">
@@ -64,9 +64,10 @@
       </div>
     </header>
 
-    <nav class="dropdown">
-      <span class="close">&times;</span>
+    <nav class="dropdown" id="navMenu">
+      <span class="close" id="menuClose">&times;</span>
       <ul>
+        <li><a href="/">Home</a></li>
         <li><a href="fede.html">Fede K'hambani</a></li>
         <li><a href="/#about">About Us</a></li>
         <li><a href="/#what-we-do">What We Do</a></li>
@@ -141,6 +142,30 @@
           }
 
           grid.appendChild(gridItem);
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("toggle");
+        const menuClose = document.getElementById("menuClose");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+          navMenu.style.display = "flex"; // Show the menu
+        });
+
+        menuClose.addEventListener("click", () => {
+          navMenu.style.display = "none"; // Hide the menu
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+          if (
+            !navMenu.contains(event.target) &&
+            !menuToggle.contains(event.target)
+          ) {
+            navMenu.style.display = "none";
+          }
         });
       });
     </script>
