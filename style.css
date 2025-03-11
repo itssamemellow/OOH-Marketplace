@@ -963,4 +963,10 @@ section#about-us {
       }
     }
   }
+
+  section.hero {
+    & p {
+      width: 100%;
+    }
+  }
 }
