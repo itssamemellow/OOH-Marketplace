@@ -969,4 +969,24 @@ section#about-us {
       width: 100%;
     }
   }
+
+  #contact-us {
+    & .contact-map {
+      width: 100%;
+
+      & div {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #invert-dark {
+    filter: brightness(1);
+  }
+
+  #invert-dark2 {
+    filter: brightness(0);
+  }
 }
