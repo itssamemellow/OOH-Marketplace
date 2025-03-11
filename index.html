@@ -58,7 +58,7 @@
         </svg>
       </div>
       <div class="login">
-        <a href="#">
+        <a href="https://www.ooh-marketplace.co.za/User/Login">
           <img src="/assets/img/icons/login.webp" alt="Login" />
         </a>
       </div>
@@ -188,7 +188,7 @@
 
       <section class="wwd" id="text">
         <h1>The Power of <br />Smart Media Buying</h1>
-        <div class="buyers">
+        <div class="sellers">
           <span class="text">
             <p>
               <strong>For Clients & Media Buyers</strong>
@@ -236,6 +236,28 @@
             </ul>
           </span>
         </div>
+
+        <div id="videos">
+          <span class="video">
+            <h2>Media</h2>
+            <div>
+              <div>
+                <video src="/assets/vid/Challenges.mp4" controls></video>
+                <h3>Challenges</h3>
+              </div>
+              <span>
+                <div>
+                  <video src="/assets/vid/Buyer.mp4" controls></video>
+                  <h3>Buyer</h3>
+                </div>
+                <div>
+                  <video src="/assets/vid/Seller.mp4" controls></video>
+                  <h3>Owner</h3>
+                </div>
+              </span>
+            </div>
+          </span>
+        </div>
       </section>
 
       <section class="media">
@@ -277,13 +299,23 @@
           </div>
         </div>
         <span class="contact-map" onload="initMap()">
-          <div id="map"></div>
+          <div id="map">
+            <iframe
+              frameborder="0"
+              scrolling="1"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?q=40%20First%20Avenue%20West%2C%20Parkhurst%2C%20Johannesburg%20%20&amp;t=m&amp;z=12&amp;output=embed&amp;iwloc=near"
+              title="OOH Marketplace"
+              aria-label="40 First Avenue West, Parkhurst, Johannesburg  "
+            ></iframe>
+          </div>
         </span>
       </section>
     </main>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AddAPILater"></script>
-    <script>
+    <!-- <script>
       function initMap() {
         var location = { lat: -26.1445, lng: 28.0155 }; // Coordinates for 40 First Avenue West, Parkhurst, Johannesburg
         var map = new google.maps.Map(document.getElementById("map"), {
@@ -296,6 +328,6 @@
           title: "OOH Marketplace",
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>

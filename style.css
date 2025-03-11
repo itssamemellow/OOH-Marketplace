@@ -567,6 +567,63 @@ section#about-us {
         width: 70%;
       }
     }
+
+    & span.video {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      & h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+
+      & div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        & div {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          & video {
+            width: 100%;
+          }
+        }
+
+        & span {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+
+          & div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            & video {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -660,18 +717,18 @@ section#about-us {
       & span {
         display: flex;
         flex-direction: row;
-        align-items: start;
-        justify-content: start;
+        align-items: center;
+        justify-content: center;
         gap: 10px;
         margin-bottom: 20px;
 
         & strong {
           font-size: 1.2rem;
-          flex: 0.4;
+          flex: 0.3;
         }
 
         & p {
-          flex: 0.6;
+          flex: 0.7;
           margin: 0;
         }
       }
@@ -681,14 +738,21 @@ section#about-us {
   & .contact-map {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     width: 50%;
     height: 400px;
 
     & div {
-      display: block;
-      width: 100%;
+      display: flex;
+      width: 90%;
       height: 100%;
+      align-items: end;
+
+      & iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
     }
   }
 }
@@ -817,7 +881,7 @@ section#about-us {
     & div {
       flex-direction: column;
 
-      &:last-child {
+      &.buyers {
         flex-direction: column-reverse;
       }
 
@@ -850,5 +914,20 @@ section#about-us {
 
   .grid {
     column-count: 2;
+  }
+
+  .wwd {
+    & div {
+      & span.video {
+        & div {
+          & div {
+            width: 100%;
+          }
+          & span {
+            flex-direction: column;
+          }
+        }
+      }
+    }
   }
 }
