@@ -401,13 +401,9 @@ section#about-us {
     display: flex;
     flex: 0.5;
     align-items: end;
+    overflow: hidden;
     justify-content: center;
     height: 100%;
-
-    & img {
-      width: auto;
-      height: 88%;
-    }
   }
 }
 
@@ -1299,4 +1295,42 @@ g.sellers .cls-50 {
 
 #linear-gradient-30 {
   filter: blur(100px);
+}
+
+span#about svg {
+  display: flex;
+  padding: 0;
+  margin: 0 0 -11px 0;
+  align-items: end;
+}
+
+@keyframes rotateAround {
+  0% {
+    transform: rotate(0deg) translate(12px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(12px) rotate(-360deg);
+  }
+}
+
+#square-animation rect,
+#square-animation path {
+  transform-origin: center;
+  animation: rotateAround 10s linear infinite;
+}
+
+#square-animation rect:nth-child(odd) {
+  animation-delay: 1s;
+}
+
+#square-animation path:nth-child(even) {
+  animation-delay: 2s;
+}
+
+#square-animation path:nth-child(odd) {
+  animation-delay: 3s;
+}
+
+#square-animation rect:nth-child(even) {
+  animation-delay: 4s;
 }
