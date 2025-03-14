@@ -981,12 +981,322 @@ section#about-us {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  #invert-dark {
-    filter: brightness(1);
-  }
+/* Hands */
 
-  #invert-dark2 {
-    filter: brightness(0);
+svg#buyers {
+  overflow: visible;
+  width: 65%;
+  height: auto;
+  transform: translate(0%, 0%) scale(0.7);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+svg#active {
+  overflow: visible;
+  width: 65%;
+  height: auto;
+  transform: translate(var(--x), var(--y)) scale(1);
+  opacity: 1;
+}
+
+g.buyers .cls-1 {
+  fill: #010101;
+}
+
+g.buyers .cls-2 {
+  fill: #fb2396;
+}
+
+g.buyers .cls-3 {
+  fill: #4d4d4d;
+}
+
+g.buyers .cls-4 {
+  fill: #01a6db;
+}
+
+g.buyers .cls-5 {
+  fill: #e0e0e0;
+}
+
+g.buyers .cls-6 {
+  fill: #ffbfb4;
+}
+
+g.buyers .cls-7 {
+  opacity: 0.2;
+}
+
+g.buyers .cls-7,
+g.buyers .cls-8,
+g.buyers .cls-9 {
+  fill: #333;
+}
+
+g.buyers .cls-10 {
+  fill: #f2f2f2;
+}
+
+g.buyers .cls-11 {
+  fill: #666;
+}
+
+g.buyers .cls-12 {
+  fill: #fd801a;
+}
+
+g.buyers .cls-13 {
+  fill: #2952a4;
+}
+
+g.buyers .cls-14 {
+  fill: #ebebeb;
+}
+
+g.buyers .cls-15 {
+  fill: #ee3a3b;
+}
+
+g.buyers .cls-16 {
+  fill: #f3cf17;
+}
+
+g.buyers .cls-17 {
+  fill: #b3b3b3;
+}
+
+g.buyers .cls-18 {
+  fill: #aeca63;
+}
+
+g.buyers .cls-19 {
+  fill: #f5f5f5;
+}
+
+g.buyers .cls-9 {
+  opacity: 0.3;
+}
+
+g.buyers .cls-20 {
+  fill: #dfa844;
+}
+
+@keyframes handshake {
+  0%,
+  100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Apply to hands */
+#Hands {
+  animation: handshake 4s ease-in-out infinite;
+}
+
+g.sellers .cls-1 {
+  fill: url(#linear-gradient-15);
+}
+
+g.sellers .cls-2 {
+  fill: url(#linear-gradient-13);
+}
+
+g.sellers .cls-3 {
+  fill: url(#linear-gradient-28);
+}
+
+g.sellers .cls-4 {
+  fill: #010101;
+}
+
+g.sellers .cls-5 {
+  fill: url(#linear-gradient-2);
+}
+
+g.sellers .cls-6 {
+  fill: url(#linear-gradient-25);
+}
+
+g.sellers .cls-7 {
+  fill: url(#linear-gradient-10);
+}
+
+g.sellers .cls-8 {
+  fill: url(#linear-gradient-12);
+}
+
+g.sellers .cls-9 {
+  fill: url(#linear-gradient-27);
+}
+
+g.sellers .cls-10 {
+  fill: #545454;
+}
+
+g.sellers .cls-11 {
+  opacity: 0.3;
+}
+
+g.sellers .cls-12 {
+  fill: #fb2396;
+}
+
+g.sellers .cls-13 {
+  fill: #01a6db;
+}
+
+g.sellers .cls-14 {
+  fill: url(#linear-gradient-26);
+}
+
+g.sellers .cls-15 {
+  fill: url(#linear-gradient-4);
+}
+
+g.sellers .cls-16 {
+  fill: url(#linear-gradient-30);
+}
+
+g.sellers .cls-17 {
+  fill: #ffbfb4;
+}
+
+g.sellers .cls-18 {
+  fill: url(#linear-gradient-3);
+}
+
+g.sellers .cls-19 {
+  fill: url(#linear-gradient-5);
+}
+
+g.sellers .cls-20 {
+  fill: url(#linear-gradient-22);
+}
+
+g.sellers .cls-21 {
+  fill: url(#linear-gradient-24);
+}
+
+g.sellers .cls-22 {
+  fill: #424242;
+}
+
+g.sellers .cls-23 {
+  fill: #1f1f1f;
+}
+
+g.sellers .cls-24 {
+  fill: #b0b0b0;
+}
+
+g.sellers .cls-25 {
+  fill: url(#linear-gradient-33);
+}
+
+g.sellers .cls-26 {
+  fill: url(#linear-gradient-8);
+}
+
+g.sellers .cls-27 {
+  fill: url(#linear-gradient-14);
+}
+
+g.sellers .cls-28 {
+  fill: url(#linear-gradient-29);
+}
+
+g.sellers .cls-29 {
+  fill: url(#linear-gradient-20);
+}
+
+g.sellers .cls-30 {
+  fill: #fd801a;
+}
+
+g.sellers .cls-31 {
+  fill: url(#linear-gradient-17);
+}
+
+g.sellers .cls-32 {
+  fill: url(#linear-gradient-7);
+}
+
+g.sellers .cls-33 {
+  fill: url(#linear-gradient-9);
+}
+
+g.sellers .cls-34 {
+  fill: #2952a4;
+}
+
+g.sellers .cls-35 {
+  fill: url(#linear-gradient-11);
+}
+
+g.sellers .cls-36 {
+  fill: url(#linear-gradient-19);
+}
+
+g.sellers .cls-37 {
+  fill: url(#linear-gradient-6);
+}
+
+g.sellers .cls-38 {
+  fill: #ee3a3b;
+}
+
+g.sellers .cls-39 {
+  fill: #f3cf17;
+}
+
+g.sellers .cls-40 {
+  fill: #aeca63;
+}
+
+g.sellers .cls-41 {
+  fill: url(#linear-gradient-21);
+}
+
+g.sellers .cls-42 {
+  fill: #7a7a7a;
+}
+
+g.sellers .cls-43 {
+  fill: url(#linear-gradient-32);
+}
+
+g.sellers .cls-44 {
+  fill: url(#linear-gradient-16);
+}
+
+g.sellers .cls-45 {
+  fill: url(#linear-gradient);
+}
+
+g.sellers .cls-46 {
+  fill: url(#linear-gradient-23);
+}
+
+g.sellers .cls-47 {
+  fill: url(#linear-gradient-31);
+}
+
+g.sellers .cls-48 {
+  fill: #dfa844;
+}
+
+g.sellers .cls-49 {
+  fill: #2e2e2e;
+}
+
+g.sellers .cls-50 {
+  fill: url(#linear-gradient-18);
+}
+
+#linear-gradient-30 {
+  filter: blur(100px);
 }
