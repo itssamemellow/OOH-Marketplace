@@ -145,6 +145,10 @@ header {
   font-weight: 500;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.192);
+
+  &#scroll {
+    position: relative;
+  }
 }
 
 .logo {
@@ -292,7 +296,7 @@ nav.dropdown {
     z-index: 999;
     cursor: pointer;
     color: #000;
-    font-size: 32px;
+    font-size: 2.6rem;
     font-weight: bold;
   }
 
@@ -353,6 +357,7 @@ section.hero {
     display: inline-block;
     padding: 15px 25px;
     background-color: #fff;
+    border: #fff solid 2px;
     color: #000;
     text-decoration: none;
     border-radius: 25px;
@@ -501,6 +506,150 @@ section#about-us {
 #what-we-do,
 #contact {
   display: block;
+}
+
+section.team {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  height: auto;
+  width: 80vw;
+  height: 72vh;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  gap: 40px;
+
+  & h1 {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: left;
+    color: #fff;
+    width: 100%;
+  }
+
+  & div#images {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+
+    & .people {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      height: 100%;
+
+      & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: 100%;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          max-height: 500px;
+          object-fit: cover;
+          background-color: #fff;
+          border-radius: 20px 20px 0 20px;
+        }
+      }
+
+      & .items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        overflow: scroll;
+        position: relative;
+        height: 72vh;
+
+        & .itemlist {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          animation: vertscroll 35s linear infinite;
+          gap: 20px;
+          width: 100%;
+          height: 100%;
+
+          & img {
+            width: auto;
+            height: auto;
+            max-width: 100px;
+            background-color: #fff;
+            border-radius: 20px 0 0 20px;
+          }
+        }
+      }
+    }
+  }
+
+  & div#text {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    border-radius: 20px 20px 20px 0;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    & h4 {
+      font-size: 1.4rem;
+    }
+
+    & p {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@keyframes vertscroll {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-330%);
+  }
+}
+
+.current {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section.team div#text div.current {
+  display: flex;
+}
+
+section.team div#text div {
+  display: none;
 }
 
 .wwd {
@@ -675,7 +824,6 @@ section#about-us {
   & .contact {
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
     width: 50%;
     padding: 0 20px;
@@ -798,7 +946,6 @@ section#about-us {
   height: auto;
   justify-content: start;
   margin: 100px auto;
-  border-radius: 20px;
 
   & h1 {
     font-size: 2rem;
@@ -823,6 +970,13 @@ section#about-us {
   }
 }
 
+#our-people iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  border-radius: 10px;
+}
+
 .grid {
   margin: 0 auto;
   width: 90%;
@@ -845,136 +999,6 @@ section#about-us {
   width: 100%;
   border-radius: 6px;
   display: block;
-}
-
-/*MEDIA QUERIES*/
-@media (max-width: 1024px) {
-  section#about-us {
-    height: 60vh;
-    & .hero-image {
-      & img {
-        height: 70%;
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    width: 100svw;
-  }
-
-  .toggle {
-    display: flex;
-  }
-
-  nav.norm {
-    display: none;
-  }
-
-  main {
-    width: 95svw;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  section.hero {
-    width: 80svw;
-  }
-
-  section#about-us {
-    height: auto;
-    width: 80svw;
-    flex-direction: column;
-
-    & .hero-image {
-      width: 100%;
-      height: auto;
-
-      & img {
-        width: 70%;
-        height: auto;
-      }
-    }
-  }
-
-  .card-container {
-    & .card {
-      animation: onScroll 240s linear infinite;
-    }
-  }
-
-  .wwd {
-    width: 80svw;
-
-    & div {
-      flex-direction: column;
-
-      &.buyers {
-        flex-direction: column-reverse;
-      }
-
-      & .text {
-        width: 100%;
-      }
-
-      & .image {
-        width: 100%;
-      }
-    }
-  }
-
-  .media {
-    width: 95svw;
-  }
-
-  #contact-us {
-    width: 80svw;
-    flex-direction: column;
-
-    & .contact {
-      width: 100%;
-    }
-
-    & .contact-map {
-      width: 100%;
-    }
-  }
-
-  .grid {
-    column-count: 2;
-  }
-
-  .wwd {
-    & div {
-      & span.video {
-        & div {
-          & div {
-            width: 100%;
-          }
-          & span {
-            flex-direction: column;
-          }
-        }
-      }
-    }
-  }
-
-  section.hero {
-    & p {
-      width: 100%;
-    }
-  }
-
-  #contact-us {
-    & .contact-map {
-      width: 100%;
-
-      & div {
-        width: 100%;
-      }
-    }
-  }
 }
 
 /* Hands */
@@ -1134,6 +1158,7 @@ g.sellers .cls-10 {
 }
 
 g.sellers .cls-11 {
+  fill: #131313;
   opacity: 0.3;
 }
 
@@ -1333,4 +1358,189 @@ span#about svg {
 
 #square-animation rect:nth-child(even) {
   animation-delay: 4s;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1024px) {
+  section#about-us {
+    height: 60vh;
+    & .hero-image {
+      & img {
+        height: 70%;
+      }
+    }
+  }
+
+  section.team {
+    & div#images {
+      width: 60%;
+
+      & .people {
+        & .container {
+          & img {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+
+    & div#text {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100svw;
+  }
+
+  .toggle {
+    display: flex;
+  }
+
+  nav.norm {
+    display: none;
+  }
+
+  main {
+    width: 95svw;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  section.hero {
+    width: 80svw;
+  }
+
+  section#about-us {
+    height: auto;
+    width: 80svw;
+    flex-direction: column;
+
+    & .hero-image {
+      width: 100%;
+      height: auto;
+
+      & img {
+        width: 70%;
+        height: auto;
+      }
+    }
+  }
+
+  .card-container {
+    & .card {
+      animation: onScroll 240s linear infinite;
+    }
+  }
+
+  .wwd {
+    width: 80svw;
+
+    & div {
+      flex-direction: column;
+
+      &.buyers {
+        flex-direction: column-reverse;
+      }
+
+      & .text {
+        width: 100%;
+      }
+
+      & .image {
+        width: 100%;
+      }
+    }
+  }
+
+  .media {
+    width: 95svw;
+  }
+
+  #contact-us {
+    width: 80svw;
+    flex-direction: column;
+
+    & .contact {
+      width: 100%;
+    }
+
+    & .contact-map {
+      width: 100%;
+    }
+  }
+
+  .grid {
+    column-count: 2;
+  }
+
+  .wwd {
+    & div {
+      & span.video {
+        & div {
+          & div {
+            width: 100%;
+          }
+          & span {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  section.hero {
+    & p {
+      width: 100%;
+    }
+  }
+
+  #contact-us {
+    & .contact-map {
+      width: 100%;
+
+      & div {
+        width: 100%;
+      }
+    }
+  }
+
+  #contact-us {
+    & .contact {
+      & #target {
+        & span {
+          & strong {
+            font-size: 1.2rem;
+            flex: 0.3;
+          }
+          & p {
+            flex: 0.7;
+          }
+        }
+      }
+    }
+  }
+
+  section.team {
+    width: 80svw;
+    flex-direction: column;
+    height: auto;
+
+    & div#images {
+      width: 100%;
+
+      & .people {
+        & .items {
+          height: 50svh;
+        }
+      }
+    }
+
+    & div#text {
+      width: 100%;
+      border-radius: 20px 0 20px 20px;
+    }
+  }
 }
