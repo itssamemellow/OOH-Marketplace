@@ -519,7 +519,7 @@ section.team {
   color: #000;
   font-family: "Montserrat", sans-serif;
   padding: 20px;
-  margin: 0 auto;
+  margin: 100px auto 0;
   gap: 40px;
 
   & h1 {
@@ -672,7 +672,8 @@ section.team div#text div {
     text-align: center;
   }
 
-  & div {
+  & div.sellers,
+  & div.buyers {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1360,6 +1361,74 @@ span#about svg {
   animation-delay: 4s;
 }
 
+/* Video section*/
+
+.video-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+  gap: 10px;
+
+  & .video-container {
+    width: 100%;
+    height: auto;
+
+    & video {
+      display: block;
+      width: 40%;
+      height: auto;
+      border-radius: 20px;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    & div.controls {
+      position: relative;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      width: 168px;
+      z-index: 2;
+    }
+
+    .controls button {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .controls button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  & .thumbnails {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 40%;
+    height: auto;
+    overflow: scroll;
+    margin: 0 auto;
+    justify-content: center;
+
+    & video {
+      width: 30%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 1024px) {
   section#about-us {
@@ -1386,6 +1455,17 @@ span#about svg {
 
     & div#text {
       width: 40%;
+    }
+  }
+
+  .video-gallery {
+    & .video-container {
+      & video {
+        width: 90%;
+      }
+    }
+    & .thumbnails {
+      width: 90%;
     }
   }
 }
@@ -1438,13 +1518,16 @@ span#about svg {
   .wwd {
     width: 80svw;
 
-    & div {
+    & div.sellers {
       flex-direction: column;
+    }
 
-      &.buyers {
-        flex-direction: column-reverse;
-      }
+    & div.buyers {
+      flex-direction: column-reverse;
+    }
 
+    & div.sellers,
+    & div.buyers {
       & .text {
         width: 100%;
       }
@@ -1541,6 +1624,17 @@ span#about svg {
     & div#text {
       width: 100%;
       border-radius: 20px 0 20px 20px;
+    }
+  }
+
+  .video-gallery {
+    & .video-container {
+      & video {
+        width: 90%;
+      }
+    }
+    & .thumbnails {
+      width: 90%;
     }
   }
 }
