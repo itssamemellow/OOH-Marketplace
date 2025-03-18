@@ -1725,4 +1725,14 @@ span#about svg {
       width: 90%;
     }
   }
+
+  section.blog-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    & span {
+      flex-direction: row;
+      height: auto;
+    }
+  }
 }
