@@ -376,6 +376,102 @@ section.hero {
   }
 }
 
+/* wORK FLOW */
+
+section.process {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 90vw;
+  margin: 100px auto 0;
+}
+
+#ProcessFlow {
+  width: 70%;
+  height: auto;
+}
+
+.recfill {
+  fill: #fff;
+  stroke-width: 0.56px;
+}
+
+.recfill,
+.iconstrk,
+.textcls,
+.strokeclr {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  animation: op 3s ease-in-out;
+}
+
+.iconstrk,
+.textcls {
+  stroke-linecap: round;
+}
+
+@keyframes op {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.iconstrk,
+.textcls,
+.strokeclr {
+  fill: none;
+}
+
+.textcls {
+  stroke-dasharray: 3;
+}
+
+.strokeclr {
+  stroke-width: 2px;
+}
+
+#draw1,
+#draw2,
+#draw3 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+#draw1.visible {
+  animation: draw 20s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+#draw2.visible {
+  animation: draw 20s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+#draw3.visible {
+  animation: draw 20s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: -400;
+  }
+  10% {
+    stroke-dashoffset: 0;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+
 section#about-us {
   display: flex;
   flex-direction: row;
@@ -1753,5 +1849,9 @@ span#about svg {
       flex-direction: row;
       height: auto;
     }
+  }
+
+  #ProcessFlow {
+    width: 100%;
   }
 }
