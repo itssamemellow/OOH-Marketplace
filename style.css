@@ -363,6 +363,7 @@ footer {
 .Links {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
   flex: 1;
   min-width: 220px;
@@ -374,6 +375,7 @@ footer {
 
 .logofooter {
   display: flex;
+  width: 88%;
   margin-bottom: 20px;
 
   & img {
@@ -387,14 +389,13 @@ footer {
   gap: 10px;
   flex: 1;
   min-width: 220px;
-  margin-top: 120px;
 }
 
 .footer-content div h3 {
   font-size: 16px;
   font-weight: 600;
   color: #000;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .footer-content div a {
@@ -1705,6 +1706,107 @@ span#about svg {
   }
 }
 
+/* Privacy Policy */
+
+#privacy-policy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70vw;
+  overflow: scroll;
+  height: auto;
+  justify-content: start;
+  margin: 100px auto 40px;
+
+  & h1 {
+    font-size: 2rem;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+  }
+
+  & h2 {
+    font-size: 1.4rem;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    font-size: 1rem;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+
+    &.indent {
+      margin-left: 20px;
+    }
+
+    &.pointer {
+      margin-top: 80px;
+    }
+
+    & strong {
+      font-weight: normal;
+    }
+  }
+
+  & ul {
+    font-size: 1rem;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+
+    &.indent {
+      display: grid;
+      grid-template-columns: 0.1fr 0.9fr;
+      margin-left: 40px;
+    }
+
+    &.indent2 {
+      display: grid;
+      grid-template-columns: 0.3fr 0.7fr;
+      margin-left: 40px;
+    }
+
+    & li {
+      margin-left: 20px;
+    }
+  }
+
+  & .privacy-policy-logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+
+    & img {
+      width: auto;
+      height: 75px;
+    }
+  }
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-style: italic;
+
+    &:hover {
+      color: #2952a4;
+      text-decoration: underline;
+    }
+  }
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 1024px) {
   section#about-us {
@@ -1956,6 +2058,10 @@ span#about svg {
 
   #ProcessFlow {
     width: 100%;
+  }
+
+  #privacy-policy {
+    width: 80svw;
   }
 }
 
